@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Calculadora IFRN</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+  <main class="container">
+
+    <button
+      class="theme-toggle"
+      type="button"
+      onclick="alternarTema()"
+      aria-label="Alternar tema"
+      id="themeButton">
+      ☀
+    </button>
+
+    <button
+      class="gear"
+      type="button"
+      onclick="abrirModal('modalConfig')"
+      aria-label="Abrir configurações">
+
+      <svg viewBox="0 0 24 24">
+        <path d="M19.14 12.94c.04-.31.06-.63.06-.94s-.02-.63-.06-.94l2.03-1.58a.5.5 0 0 0 .12-.64l-1.92-3.32a.5.5 0 0 0-.6-.22l-2.39.96a7.1 7.1 0 0 0-1.63-.94L14.39 2.8a.5.5 0 0 0-.49-.4h-3.8a.5.5 0 0 0-.49.4l-.36 2.52c-.58.23-1.12.54-1.63.94l-2.39-.96a.5.5 0 0 0-.6.22L2.71 8.84a.5.5 0 0 0 .12.64l2.03 1.58c-.04.31-.06.63-.06.94s.02.63.06.94l-2.03 1.58a.5.5 0 0 0-.12.64l1.92 3.32c.13.23.4.32.6.22l2.39-.96c.51.4 1.05.71 1.63.94l.36 2.52c.04.23.24.4.49.4h3.8c.25 0 .45-.17.49-.4l.36-2.52c.58-.23 1.12-.54 1.63-.94l2.39.96c.21.1.47.01.6-.22l1.92-3.32a.5.5 0 0 0-.12-.64l-2.03-1.58ZM12 15.5A3.5 3.5 0 1 1 12 8a3.5 3.5 0 0 1 0 7.5Z"/>
+      </svg>
+    </button>
+
+    <h1>Calculadora IFRN</h1>
+    <p class="subtitle">Escore padronizado</p>
+
+    <label for="prova">Prova</label>
+
+    <select id="prova" onchange="calcular()">
+      <option value="matematica">Matemática</option>
+      <option value="portugues">Português</option>
+      <option value="redacao">Produção Textual</option>
+    </select>
+
+    <label for="escore">Escore</label>
+
+    <input
+      type="number"
+      id="escore"
+      step="0.0001"
+      placeholder="Digite o escore"
+    >
+
+    <button
+      class="btn-primary"
+      type="button"
+      onclick="calcular(true)">
+      Calcular
+    </button>
+
+    <button
+      class="btn-secondary"
+      type="button"
+      onclick="limparCampos()">
+      Limpar
+    </button>
+
+    <section class="resultado">
+
+      <div class="card">
+        <div class="card-title">Nota Final</div>
+        <div class="card-value" id="notaFinal">--</div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">Nota Estimada</div>
+        <div class="card-value" id="notaReal">--</div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">Acertos</div>
+        <div class="card-value" id="acertos">--</div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
