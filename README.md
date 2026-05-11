@@ -2,6 +2,8 @@
 
 Uma calculadora web simples e estilizada para estimar a **nota bruta** e a quantidade de **acertos estimados** a partir do **Escore Padronizado** utilizado no processo seletivo do IFRN.
 
+https://vesgucho.github.io/Calc-ifrn/
+
 ---
 
 ## ✨ Funcionalidades
