@@ -10,8 +10,8 @@
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-  <main class="container">
 
+  <main class="container">
     <button class="theme-toggle" type="button" onclick="alternarTema()" aria-label="Alternar tema" id="themeButton">☀</button>
 
     <button class="gear" type="button" onclick="abrirModalConfig()" aria-label="Abrir configurações">
@@ -56,52 +56,51 @@
         <div class="card-value" id="acertos">--</div>
       </div>
     </section>
-
-    <div id="modalConfig" class="modal">
-      <div class="modal-content">
-        <h2>Configurar Parâmetros</h2>
-        <p style="margin-bottom: 15px; font-size: 0.85rem; color: var(--muted);">Edite os valores padrão para cada uma das matérias do processo.</p>
-        
-        <div class="config-grid-scroll">
-          <fieldset class="config-section">
-            <legend>Matemática</legend>
-            <label>Média:</label>
-            <input type="number" id="media_matematica" step="0.0001">
-            <label>Desvio Padrão:</label>
-            <input type="number" id="desvio_matematica" step="0.0001">
-          </fieldset>
-
-          <fieldset class="config-section">
-            <legend>Português</legend>
-            <label>Média:</label>
-            <input type="number" id="media_portugues" step="0.0001">
-            <label>Desvio Padrão:</label>
-            <input type="number" id="desvio_portugues" step="0.0001">
-          </fieldset>
-
-          <fieldset class="config-section">
-            <legend>Produção Textual</legend>
-            <label>Média:</label>
-            <input type="number" id="media_redacao" step="0.0001">
-            <label>Desvio Padrão:</label>
-            <input type="number" id="desvio_redacao" step="0.0001">
-          </fieldset>
-        </div>
-
-        <button class="btn-primary" type="button" onclick="salvarConfiguracoes()" style="margin-top: 15px;">Salvar Tudo</button>
-        <button class="btn-secondary" type="button" onclick="fecharModalConfig()">Cancelar</button>
-      </div>
-    </div>
-
-    <div id="modalAlerta" class="modal alert-modal">
-      <div class="modal-content alert-content">
-        <h3 style="color: #ff4d4d; margin-bottom: 10px;">Aviso de Limite</h3>
-        <p id="textoAlerta">O valor calculado excede os limites permitidos.</p>
-        <button class="btn-primary" type="button" onclick="fecharAlertaOk()" style="margin-top: 15px; background: #ff4d4d;">OK</button>
-      </div>
-    </div>
-
   </main>
+
+  <div id="modalConfig" class="modal">
+    <div class="modal-content">
+      <h2>Configurar Parâmetros</h2>
+      <p style="margin-bottom: 15px; font-size: 0.85rem; color: var(--muted);">Edite os valores padrão para cada uma das matérias do processo.</p>
+      
+      <div class="config-grid-scroll">
+        <fieldset class="config-section">
+          <legend>Matemática</legend>
+          <label>Média:</label>
+          <input type="number" id="media_matematica" step="0.0001">
+          <label>Desvio Padrão:</label>
+          <input type="number" id="desvio_matematica" step="0.0001">
+        </fieldset>
+
+        <fieldset class="config-section">
+          <legend>Português</legend>
+          <label>Média:</label>
+          <input type="number" id="media_portugues" step="0.0001">
+          <label>Desvio Padrão:</label>
+          <input type="number" id="desvio_portugues" step="0.0001">
+        </fieldset>
+
+        <fieldset class="config-section">
+          <legend>Produção Textual</legend>
+          <label>Média:</label>
+          <input type="number" id="media_redacao" step="0.0001">
+          <label>Desvio Padrão:</label>
+          <input type="number" id="desvio_redacao" step="0.0001">
+        </fieldset>
+      </div>
+
+      <button class="btn-primary" type="button" onclick="salvarConfiguracoes()" style="margin-top: 15px;">Salvar Tudo</button>
+      <button class="btn-secondary" type="button" onclick="fecharModalConfig()">Cancelar</button>
+    </div>
+  </div>
+
+  <div id="modalAlerta" class="modal alert-modal">
+    <div class="modal-content alert-content">
+      <h3 style="color: #ff4d4d; margin-bottom: 10px;">Aviso de Limite</h3>
+      <p id="textoAlerta">O valor calculado excede os limites permitidos.</p>
+      <button class="btn-primary" type="button" onclick="fecharAlertaOk()" style="margin-top: 15px; background: #ff4d4d;">OK</button>
+    </div>
+  </div>
 
   <div class="toast" id="toast"></div>
 
