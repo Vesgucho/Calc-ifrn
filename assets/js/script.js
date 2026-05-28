@@ -76,7 +76,7 @@ function calcular(mostrarErro = false) {
 }
 
 function abrirAlertaCentral(mensagem) {
-  document.getElementById("textoAlerta").textContent = message = mensagem;
+  document.getElementById("textoAlerta").textContent = mensagem;
   document.getElementById("modalAlerta").classList.add("show");
 }
 
