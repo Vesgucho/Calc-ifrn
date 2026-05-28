@@ -6,14 +6,13 @@ https://vesgucho.github.io/Calc-ifrn/
 
 ## ✨ Funcionalidades
 
-- **Layout Inteligente e Dinâmico:** Em telas grandes, adota um design em duas colunas estilo *dashboard* (campos na esquerda e resultados na direita). Em celulares, o layout colapsa perfeitamente para uma visualização vertical.
 - **Exibição Condicional de Resultados:**
   - Ao selecionar **Matemática** ou **Português**, a interface foca e exibe exclusivamente o card de **Acertos**.
   - Ao selecionar **Produção Textual**, o sistema oculta os acertos e exibe apenas a **Nota Estimada**.
 - **Validação com Bloqueio de Estouro:**
   - Para Matemática e Português, o limite máximo é de **40 acertos**.
   - Para Produção Textual (Redação), a nota máxima estimada é **100**.
-  - Caso o escore inserido gere um valor acima desses limites, os cartões mostram a mensagem `Inválido` e uma caixa de diálogo customizada surge no centro da tela alertando o usuário. Ao clicar em **OK**, os campos e resultados são limpos automaticamente.
+  - Caso o escore inserido gere um valor acima desses limites, os cartões mostram a mensagem `Inválido` e uma caixa de diálogo surge no centro da tela alertando o usuário. Ao clicar em **OK**, os campos e resultados são limpos automaticamente.
 - **Gerenciamento Unificado de Parâmetros:** O modal da engrenagem permite visualizar e alterar simultaneamente as médias e os desvios padrões de todas as três disciplinas em um só lugar.
 - **Sistema de Temas Integrado:** Alternância nativa entre Tema Escuro (padrão cibernético/roxo) e Tema Claro, salvando a preferência do usuário no navegador (`LocalStorage`).
 
