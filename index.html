@@ -20,21 +20,25 @@
       </svg>
     </button>
 
-    <h1>Calculadora IFRN</h1>
-    <p class="subtitle">Escore padronizado</p>
+    <div class="cabecalho">
+      <h1>Calculadora IFRN</h1>
+      <p class="subtitle">Escore padronizado</p>
+    </div>
 
-    <label for="prova">Prova</label>
-    <select id="prova" onchange="atualizarVisibilidadeCards(); calcular();">
-      <option value="matematica">Matemática</option>
-      <option value="portugues">Português</option>
-      <option value="redacao">Produção Textual</option>
-    </select>
+    <div class="painel-cadastro">
+      <label for="prova">Prova</label>
+      <select id="prova" onchange="atualizarVisibilidadeCards(); calcular();">
+        <option value="matematica">Matemática</option>
+        <option value="portugues">Português</option>
+        <option value="redacao">Produção Textual</option>
+      </select>
 
-    <label for="escore">Escore</label>
-    <input type="number" id="escore" step="0.0001" placeholder="Digite o escore">
+      <label for="escore">Escore</label>
+      <input type="number" id="escore" step="0.0001" placeholder="Digite o escore">
 
-    <button class="btn-primary" type="button" onclick="calcular(true)">Calcular</button>
-    <button class="btn-secondary" type="button" onclick="limparCampos()">Limpar</button>
+      <button class="btn-primary" type="button" onclick="calcular(true)">Calcular</button>
+      <button class="btn-secondary" type="button" onclick="limparCampos()">Limpar</button>
+    </div>
 
     <section class="resultado">
       <div class="card" id="cardNotaFinal">
