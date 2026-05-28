@@ -75,15 +75,14 @@ function calcular(mostrarErro = false) {
   document.getElementById("notaFinal").textContent = `${notaFinal}%`;
 }
 
-// Funções da Janela de Erro Centralizada
 function abrirAlertaCentral(mensagem) {
-  document.getElementById("textoAlerta").textContent = mensagem;
+  document.getElementById("textoAlerta").textContent = message = mensagem;
   document.getElementById("modalAlerta").classList.add("show");
 }
 
 function fecharAlertaOk() {
   document.getElementById("modalAlerta").classList.remove("show");
-  limparCampos(); // Limpa as caixas de texto e os resultados da interface
+  limparCampos();
 }
 
 function limparResultado() {
@@ -108,7 +107,6 @@ function mostrarToast(texto) {
   }, 2300);
 }
 
-// Funções da Engrenagem (Configurar todas as médias e desvios)
 function abrirModalConfig() {
   document.getElementById("media_matematica").value = provas.matematica.media;
   document.getElementById("desvio_matematica").value = provas.matematica.desvio;
