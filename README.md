@@ -1,6 +1,4 @@
-# 📊 Calculadora IFRN-CNAT
-
-Uma calculadora web simples e estilizada para estimar a **nota bruta** e a quantidade de **acertos estimados** a partir do **Escore Padronizado** utilizado no processo seletivo do IFRN.
+# 📊 Calculadora IFRN
 
 https://vesgucho.github.io/Calc-ifrn/
 
@@ -8,91 +6,22 @@ https://vesgucho.github.io/Calc-ifrn/
 
 ## ✨ Funcionalidades
 
-- Seleção entre:
-  - Matemática
-  - Português
-  - Produção Textual
-- Conversão automática de escore padronizado em nota bruta
-- Estimativa de acertos baseada no valor da questão
-- Interface moderna com tema roxo
-- Sistema de configuração de média e desvio padrão
-- Cálculo automático ao abrir a página
-
----
-
-## 🖥️ Tecnologias Utilizadas
-
-- HTML5
-- CSS3
-- JavaScript Vanilla
+- **Layout Inteligente e Dinâmico:** Em telas grandes, adota um design em duas colunas estilo *dashboard* (campos na esquerda e resultados na direita). Em celulares, o layout colapsa perfeitamente para uma visualização vertical.
+- **Exibição Condicional de Resultados:**
+  - Ao selecionar **Matemática** ou **Português**, a interface foca e exibe exclusivamente o card de **Acertos**.
+  - Ao selecionar **Produção Textual**, o sistema oculta os acertos e exibe apenas a **Nota Estimada**.
+- **Validação com Bloqueio de Estouro:**
+  - Para Matemática e Português, o limite máximo é de **40 acertos**.
+  - Para Produção Textual (Redação), a nota máxima estimada é **100**.
+  - Caso o escore inserido gere um valor acima desses limites, os cartões mostram a mensagem `Inválido` e uma caixa de diálogo customizada surge no centro da tela alertando o usuário. Ao clicar em **OK**, os campos e resultados são limpos automaticamente.
+- **Gerenciamento Unificado de Parâmetros:** O modal da engrenagem permite visualizar e alterar simultaneamente as médias e os desvios padrões de todas as três disciplinas em um só lugar.
+- **Sistema de Temas Integrado:** Alternância nativa entre Tema Escuro (padrão cibernético/roxo) e Tema Claro, salvando a preferência do usuário no navegador (`LocalStorage`).
 
 ---
 
 ## 📐 Fórmula Utilizada
 
-A nota é calculada usando a fórmula:
+A nota inicial é calculada aplicando as regras estatísticas do Escore Padronizado do IFRN:
 
 ```math
 Nota = \left(\frac{Escore - 500}{100}\right) \times Desvio + Média
-```
-
-Depois disso:
-
-- A nota é arredondada para baixo em múltiplos de 5
-- Os acertos estimados são calculados dividindo a nota pelo valor da questão
-
----
-
-## 🎨 Interface
-
-A calculadora possui:
-
-- Design responsivo
-- Cartões interativos para resultados
-- Modal de configurações
-- Tema inspirado nas cores do IFRN
-
----
-
-## ⚙️ Configurações
-
-A engrenagem no canto superior permite alterar:
-
-- Média das provas
-- Desvio padrão das provas
-
-Isso facilita adaptar a calculadora para diferentes edições do processo seletivo.
-
----
-
-## 🚀 Como Usar
-
-1. Baixe o projeto
-2. extraia e abra no seu editor de código-fonte
-3. Escolha a matéria
-4. Digite o escore
-5. Informe o valor da questão (padrão 5)
-6. Clique em **Calcular**
-
----
-
-## 💡 Possíveis Melhorias Futuras
-
-- Salvar configurações no navegador usando LocalStorage
-- Tema claro/escuro
-- Histórico de cálculos
-- Responsividade mobile aprimorada
-- Conversão automática de acertos para escore
-
----
-
-## 👨‍💻 Autor
-
-Projeto desenvolvido para auxiliar estudantes do IFRN.
-
----
-
-## 📜 Licença
-
-Este projeto está sob a licença MIT.  
-Sinta-se livre para usar, modificar e compartilhar.
