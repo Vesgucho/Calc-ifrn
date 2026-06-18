@@ -14,7 +14,6 @@ https://vesgucho.github.io/Calc-ifrn/
   - Para Produção Textual (Redação), a nota máxima estimada é **100**.
   - Caso o escore inserido gere um valor acima desses limites, os cartões mostram a mensagem `Inválido` e uma caixa de diálogo surge no centro da tela alertando o usuário. Ao clicar em **OK**, os campos e resultados são limpos automaticamente.
 - **Gerenciamento Unificado de Parâmetros:** O modal da engrenagem permite visualizar e alterar simultaneamente as médias e os desvios padrões de todas as três disciplinas em um só lugar.
-- **Sistema de Temas Integrado:** Alternância nativa entre Tema Escuro (padrão cibernético/roxo) e Tema Claro, salvando a preferência do usuário no navegador (`LocalStorage`).
 
 ---
 
